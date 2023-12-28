@@ -77,6 +77,7 @@ ul li{
 	display: inline-flex;
 	color: red;
 	font-size: 18px;
+	line-height: 2;
 }
 
 .header_contacts-wrapper li:nth-child(3) a{
@@ -460,7 +461,9 @@ ul li{
 	background: #5c5c5e;
 	color: #ffffff;
 	text-align: right;
-	padding-left: 90%;
 	font-size: 25px;
 	line-height: 20px;
+	display: flex;
+	justify-content: flex-end;
 }
+	
