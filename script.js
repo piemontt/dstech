@@ -34,5 +34,15 @@ $(document).ready(function(){
     $('#menu_close').on('click', function(){
       $('.burger_menu').css('left', '100%')
     })
+
+    /****ниже костыли*****/
+    if (('.modal').hasClass('show')) {
+      $('.burger_menu').css('display', 'none')
+    }
+    else {
+      $('.burger_menu').css('display', 'block')
+    }
+
+    
     
 });
