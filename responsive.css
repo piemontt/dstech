@@ -225,9 +225,6 @@
 	.burger_menu {
 		top: 0;
 	}
-	.burger_button {
-		margin-top: 4%;
-	}
 	header {
 		top: 0;
 	}
@@ -240,7 +237,7 @@
 		display: block;
 		height: 40px;
 		width: 40px;
-		margin-top: 6%;
+		margin-top: 4%;
 		flex-shrink: 0;
 		margin-right: 4%;
 		cursor: pointer;
@@ -462,7 +459,15 @@
   	}
 
 }
+@media (max-width: 410px) {
+	  .burger_button {
+	  	margin-top: 6%;
+    	margin-right: 5%;
+	  }
+}
+
 @media (max-width: 380px) {
+
 	.promotion {
         margin-top: 3.8rem;
     }

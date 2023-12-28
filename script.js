@@ -1,14 +1,17 @@
 $(document).ready(function(){
+
     $('.product_slider').slick({
       variableWidth: true,
       slidesToShow: 1,
       dots: true,
     }); 
+    
     $(window).scroll(function(){
       if ($(this).scrollTop() > 0) {
         $('.header').addClass('header-shadow')
       }
     })
+
     $('.product_button:first-child').addClass('product_button-active');
     $('.product_button').each(function(index) {
       $( this ).on('click', function() {
@@ -18,15 +21,18 @@ $(document).ready(function(){
         $(this).addClass('product_button-active');
       })
     })
-    $('.burger_button').on('click', function(){
+
+    if ($(window).width() > 992) {
+      $('.burger_menu').css('display', 'none')
+    }
+    else if ($(window).width() < 992) {
       $('.burger_menu').css('display', 'block')
+    }
+    $('.burger_button').on('click', function(){
      $('.burger_menu').css('left', '0')
     })
     $('#menu_close').on('click', function(){
       $('.burger_menu').css('left', '100%')
-      $('.burger_menu').css('display', 'none')
     })
-    if ($(window).width() > 992) {
-      $('.burger_menu').css('display', 'none')
-    }
+    
 });
