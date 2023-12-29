@@ -369,7 +369,6 @@
 		cursor: pointer;
 		margin-left: -2%;
 	}
-
 }
 
 @media (max-width: 480px) {
@@ -467,8 +466,12 @@
 }
 
 @media (max-width: 380px) {
-
 	.promotion {
         margin-top: 3.8rem;
     }
+    .promotion_card span {
+	    font-size: 13px;
+	    margin-top: -2.8rem;
+	    margin-left: 0.5rem;
+  	}
 }
