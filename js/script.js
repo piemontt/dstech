@@ -31,7 +31,5 @@ $(document).ready(function() {
         $('.burger_menu').css('display', 'block');
     }
     
-    $(function() {
-        $('.main_card').matchHeight();
-    });
+    $('.main_card').matchHeight();
 });
