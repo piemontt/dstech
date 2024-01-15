@@ -1,22 +1,16 @@
 * {
     -webkit-transition: all 0.3s;
     -o-transition: all 0.3s;
-    transition: all 0.3s !important;
-    font-family: Inter;
+    -webkit-transition: all 0.2s ease !important;
+    -o-transition: all 0.2s ease !important;
+    transition: all 0.2s ease !important;
+    font-family: Inter, sans-serif;
 }
 
 @font-face {
     font-family: 'Inter';
     src: url('src/fonts/Inter/Inter-Bold.woff') format('woff');
     font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Inter';
-    src: url('src/fonts/Inter/Inter-Black.woff') format('woff');
-    font-weight: 900;
     font-style: normal;
     font-display: swap;
 }
@@ -31,8 +25,8 @@
 
 @font-face {
     font-family: 'Inter';
-    src: url('src/fonts/Inter/Inter-Thin.woff') format('woff');
-    font-weight: 100;
+    src: url('src/fonts/Inter/Inter-SemiBold.woff') format('woff');
+    font-weight: 600;
     font-style: normal;
     font-display: swap;
 }
@@ -47,30 +41,6 @@
 
 @font-face {
     font-family: 'Inter';
-    src: url('src/fonts/Inter/Inter-SemiBold.woff') format('woff');
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Inter';
-    src: url('src/fonts/Inter/Inter-Light.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Inter';
-    src: url('src/fonts/Inter/Inter-ExtraLight.woff') format('woff');
-    font-weight: 200;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Inter';
     src: url('src/fonts/Inter/Inter-ExtraBold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
@@ -79,7 +49,6 @@
 
 body {
     overflow-x: hidden;
-    font-weight: 400;
     line-height: 1.067;
     position: relative;
     padding: 0 !important;
@@ -88,14 +57,17 @@ body {
 }
 
 a {
-    all: unset;
     text-decoration: none;
     color: #242424;
-    cursor: pointer;
 }
 
 a:visited {
     color: #242424;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 header {
@@ -150,10 +122,7 @@ header {
 
 .menu-item a {
     font-size: 15px;
-    font-weight: 400;
     line-height: 18px;
-    letter-spacing: 0;
-    cursor: pointer;
 }
 
 .menu-item:first-child::after {
@@ -177,8 +146,6 @@ header {
 
 .header-contacts a:last-child {
     margin-left: 5px;
-    font-family: Inter;
-    font-size: 16px;
     font-weight: 600;
     line-height: 19px;
 }
@@ -186,19 +153,17 @@ header {
 .phone::before {
     content: '●';
     color: #26D72E;
-    font-size: 16px;
 }
 
 .phone {
     text-decoration: none;
     color: #242424;
-    font-size: 16px;
     font-weight: 600;
     line-height: 19px;
 }
 
 .main {
-    padding-top: 200px;
+    padding: 200px 0 100px;
     background: url('src/image/bg.png');
     background-size: cover;
     background-position: center;
@@ -209,7 +174,6 @@ header {
     font-size: 54px;
     font-weight: 600;
     line-height: 59px;
-    letter-spacing: 0;
     text-align: center;
     color: #F8F8F8;
     margin-bottom: 0;
@@ -275,7 +239,6 @@ header {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    min-height: 200px;
 }
 
 .number {
@@ -310,8 +273,8 @@ header {
 .card_name {
     position: relative;
     font-size: 17px;
-    font-weight: 500;
     line-height: 24px;
+    margin-top: 50px;
 }
 
 .cards-wrapper div:nth-child(1) .main_card {
@@ -350,7 +313,7 @@ header {
     grid-template-columns: 6fr 3fr 5fr;
     -ms-grid-rows: 400px 15px 400px;
     grid-template-rows: 400px 400px;
-    gap: 15px 15px;
+    gap: 15px;
     grid-template-areas:
         "a b c"
         "a d d"
@@ -382,45 +345,33 @@ header {
     grid-area: d;
 }
 
-.pluses_card:first-child .pluses_card_title {
-    bottom: 3.5%;
-    left: 5%;
-}
-
-.pluses_card:nth-child(2) .pluses_card_title {
-    bottom: 6%;
-    left: 8%;
-}
-
-.pluses_card:nth-child(3) .pluses_card_title {
-    bottom: 6%;
-    left: 5%;
-}
-
-.pluses_card:nth-child(4) .pluses_card_title {
-    bottom: 6%;
-    left: 4%;
-}
-
-.pluses_card img {
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
 .pluses_card {
     position: relative;
+    background-position: center;
+    background-size: cover;
+    border-radius: 15px;
+    display: flex;
+    align-items: flex-end;
+    padding: 0 0 30px 20px;
+}
+
+.pluses_card:first-child {
+   background-image: url(src/image/img-1.jpg);
+}
+.pluses_card:nth-child(2) {
+    background-image: url(src/image/img-2.jpg);
+}
+.pluses_card:nth-child(3) {
+    background-image: url(src/image/img-3.jpg);
+}
+.pluses_card:nth-child(4) {
+    background-image: url(src/image/img-4.jpg);
 }
 
 .pluses_card_title {
     font-size: 20px;
     font-weight: 600;
     color: #F8F8F8;
-    position: absolute;
-    bottom: 7%;
-    left: 8%;
 }
 
 .solution {
@@ -447,21 +398,20 @@ header {
     text-align: center;
     padding-top: 15px;
     padding-bottom: 15px;
-    width: 196px;
+    min-width: 196px;
 }
 
 .nav-link:hover {
     color: #F8F8F8;
 }
 
+.nav-link[aria-selected="true"] {
+    color: #F8F8F8;
+}
+
 .active:not(div) {
     background: -o-linear-gradient(9deg, rgba(105, 209, 249, 1) 0%, rgba(105, 209, 249, 1) 6%, rgba(53, 153, 226, 1) 55%, rgba(43, 143, 222, 1) 89%);
     background: linear-gradient(81deg, rgba(105, 209, 249, 1) 0%, rgba(105, 209, 249, 1) 6%, rgba(53, 153, 226, 1) 55%, rgba(43, 143, 222, 1) 89%);
-    color: #F8F8F8 !important;
-}
-
-.solution_usage {
-    margin-top: 15px;
 }
 
 .usage-title {
@@ -470,6 +420,7 @@ header {
     line-height: 34px;
     color: #F8F8F8;
     padding-bottom: 25px;
+    margin-top: 15px;
 }
 
 .usage-title__result {
@@ -486,10 +437,8 @@ header {
 
 .usage-list li {
     font-size: 17px;
-    font-weight: 400;
     line-height: 24px;
     padding-bottom: 20px;
-    text-align: left;
     color: #F8F8F8;
 }
 
@@ -539,19 +488,9 @@ header {
     color: #F8F8F8;
     font-size: 17px;
     line-height: 24px;
-    text-align: left;
-}
-
-.slider_item-wrapper {
-    width: 100%;
-    height: 636px;
 }
 
 .slider_item {
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
     border-radius: 10px;
 }
 
@@ -642,9 +581,7 @@ header {
 .cost-area-desc {
     color: #F8F8F8;
     font-size: 15px;
-    font-weight: 400;
     line-height: 24px;
-    text-align: left;
     margin-left: 20px;
 }
 
@@ -654,18 +591,13 @@ header {
 }
 
 .header-contacts a img:hover {
-    height: 105%;
-    width: 105%;
-    cursor: pointer;
+    -webkit-transform: scale(1.1, 1.1);
+    -ms-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
 }
 
 .phone:hover {
     text-shadow: 0px 6px 19px rgba(0, 34, 56, 0.34);
-    cursor: pointer;
-}
-
-.logo {
-    cursor: pointer;
 }
 
 .button-cost:hover {
@@ -688,11 +620,26 @@ header {
 .sub-menu {
     position: fixed;
     display: block;
-    top: 65px;
-    margin-left: -20px;
+    top: 25px;
+    margin-left: -65px;
     background: #F8F8F8;
     padding: 20px;
     border-radius: 10px;
+    opacity: 0;
+    -webkit-transform: scale(1, 0);
+    -ms-transform: scale(1, 0);
+    transform: scale(1, 0);
+    -webkit-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+.sub-menu-active {
+    top: 65px;
+    opacity: 1;
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1);
 }
 
 .sub-menu li {
@@ -711,13 +658,10 @@ header {
     background: #e9eef5;
 }
 
-.sub-menu {
-    display: none;
-}
-
 .burger_menu {
     display: none;
     position: fixed;
+    top: 0;
     left: 200%;
     background: #F8F8F8;
     width: 100%;
@@ -771,4 +715,18 @@ header {
 .tab-content>.active,
 .pill-content>.active {
     height: auto;
+}
+
+.slick-initialized .slick-slide {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.header_items-wrapper .col-auto {
+    padding-left: 0;
+    padding-right: 0;
 }
